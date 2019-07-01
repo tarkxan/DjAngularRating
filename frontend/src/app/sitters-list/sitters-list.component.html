@@ -1,0 +1,57 @@
+
+<!-------------------- Rating Widget -------------------->
+<div class='rating-range'>
+
+  <h4>Filter Sitters by Rating:</h4>
+
+  <div class="panel panel-primary">
+
+    <app-rating [rating]='rating' (ratingClick)='ratingComponentClick($event)'>
+
+    </app-rating>
+    <div>Sitters with rating {{ rating - .5 }} or above</div>
+    <!-- <p *ngIf='ratingClicked'>You selected: {{ratingClicked}} stars</p> -->
+
+  </div>
+
+</div>
+
+<!-------------------- Sitters List Data -------------------->
+
+<div *ngFor="let sitter of sitters | async let i = index" style="width: 300px;">
+
+  <!-- <app-sitter-details [sitter]='sitter'>
+
+  </app-sitter-details> -->
+  <img class="sitter_img" src="{{ sitter.sitter_image }}">
+
+  <div>
+    <!-- <p id="sitter_name">{{ forloop.counter }}. {{ sitter.sitter_name }}</p> -->
+    <!-- <p id="sitter_name" [title]=" sitter.sitter_name">{{i + 1}}. {{ sitter.sitter_name }}</p> -->
+    <p (click)="sitterNameClicked(sitter)" id="sitter_name" [title]=" sitter.sitter_name">{{i + 1}}. {{ sitter.sitter_name }}</p>
+
+    <p id="sitter_avg_score"> Rating: {{ sitter.avg_rating_score }}</p>
+
+    <div id="sitter_rating_stars">
+
+      <span *ngFor="let item of arrayFilledStars(sitter.avg_rating_score); let i = index;">
+          <i class="fa fa-star" aria-hidden="true" style="color: orange;"></i>&nbsp;
+      </span>
+      <span *ngFor="let item of arrayEmptyStars(sitter.avg_rating_score); let i = index;">
+          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+      </span>
+
+    </div>
+
+    <!-- data sorted by overall_sitter_rank -->
+    <!-- <p id="sitter_rank"> {{ sitter.overall_sitter_rank }}</p> -->
+
+    <br><br><br>
+
+    <hr>
+
+</div>
+
+</div>
+
+

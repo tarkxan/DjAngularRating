@@ -1,0 +1,165 @@
+A {
+  color: #777777;
+}
+
+.rating-range{
+  text-align: center;
+  /* color: green; */
+  /* background-color: #f9f8eb; */
+
+  color: #07aa32;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#rating-header{
+  float: left;
+}
+
+.title{
+  font-weight: 900;
+}
+/* .panel{
+  align-items: center;
+} */
+
+body {
+  /*padding: 15px;*/
+  background:#f2f4f6;
+  margin: 0;
+  font-family: 'Raleway';
+  color: #393e46;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+}
+
+.navbarbrand {
+ padding:0;
+ margin:0;
+ width:130px;
+ height:55px
+}
+
+.board{
+  text-align: center;
+}
+
+#navbarTogglerDemo03{
+  position: absolute;
+  right: 60px;
+}
+
+.ServiceType{
+  float: left;
+  width: 25%;
+  background-color: #f6f6f6;
+}
+
+.Content{
+  width: 50%;
+  background-color: #fafafa;
+}
+
+.LocationMap{
+  width: 25%;
+  background-color: #f6f6f6;
+}
+
+.navb{
+  position: fixed;
+}
+
+.sitter_img {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+#sitter_name {
+  color: #348498;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#sitter_avg_score {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#sitter_rank {
+  text-align: center;
+}
+
+#sitter_rating_stars {
+  text-align: center;
+}
+
+hr {
+border-style: none;
+/*border-top-style: dotted;*/
+border-color: #7ed3b2;
+border-width: 7px;
+/*width: 4%;*/
+}
+
+/*        rating      */
+.stars{
+  position: relative;
+  text-content: center;
+  /* left:25%; */
+}
+.star{
+/*color: goldenrod;*/
+/*font-size: 2.0rem;*/
+padding: 0 1rem; /* space out the stars */
+}
+.star input{
+  display: none;
+}
+.star::before{
+/*content: '\2606'; */   /* star outline */
+/*cursor: pointer;*/
+
+content: '\f005';
+font-family: fontAwesome;
+font-size: 30px;
+color: #89a3b2;
+}
+.star.rated::before{
+/* the style for a selected star */
+/*content: '\2605';*/  /* filled star */
+
+content: '\f005';
+  font-family: fontAwesome;
+
+  font-size: 30px;
+  color: orange;
+  top: 0;
+
+opacity: 1;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0,0,0, .5);
+}
+/*
+.star.rated:hover:before,
+.star.rated:hover ~ label:before,
+.star input:checked ~ label:before{
+  opacity: 0;
+}*/
+
+.stars{
+  counter-reset: rateme 0;
+  font-size: 2.0rem;
+  font-weight: 900;
+}
+.star.rated{
+  counter-increment: rateme 1;
+}
+.stars::after{
+  content: counter(rateme) '/5';
+}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>
+        CSV Upload Page
+    </h1>
+
+    {% if messages %}
+
+        {% for message in messages %}
+
+            <div>
+                <strong>{{ message | safe }}</strong>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h3>{{ order_header }}</h3>
+        <h4>{{ order_message }}</h4>
+
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            <label><h4><strong>Select a file:</strong></h4></label>
+            <input type="file" name="file"><br>
+            <h4><strong>Accepts CSV files only</strong></h4>
+            <button type="submit">Upload File</button>
+
+        </form>
+
+    {% endif %}
+
+{% endblock %}

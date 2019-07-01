@@ -1,0 +1,56 @@
+A {
+    color: #777777;
+}
+
+.title{
+    font-weight: 900;
+}
+
+body {
+    /*padding: 15px;*/
+    background:#f2f4f6;
+    margin: 0;
+    font-family: 'Raleway';
+    color: #393e46;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+}
+
+.navbarbrand {
+   padding:0;
+   margin:0;
+   width:130px;
+   height:55px
+}
+
+.board{
+    text-align: center;
+}
+
+#navbarTogglerDemo03{
+    position: absolute;
+    right: 60px;
+}
+
+.ServiceType{
+    float: left;
+    width: 25%;
+    background-color: #f6f6f6;
+}
+
+.Content{
+    width: 50%;
+    background-color: #fafafa;
+}
+
+.LocationMap{
+    width: 25%;
+    background-color: #f6f6f6;
+}
+
+.navb{
+    position: fixed;
+}
