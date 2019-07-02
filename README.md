@@ -174,8 +174,3 @@ Implemented the following Tests:
 	- Views
 	- API (views)
 	- Rating Calculations
-
-	Improvements I consider:
-	- better design
-	- partial rating with stars
-	- tests for fronend
