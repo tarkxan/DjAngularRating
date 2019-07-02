@@ -42,7 +42,7 @@ Allow users to filter out sitters whose average ratings is below a user specifie
 
  - Backend developed with Django REST Framework
  - File upload implemented with Django
- - Fronend developed with Angular
+ - Frontend developed with Angular
  - Unittest in rover_app/tests.py
  - rover_app/utils.py has all custom functions
  - database: sqlite
@@ -81,13 +81,14 @@ Instructions:
 	  1.2. Angular
 	  
 		I used:
-			node -v: 		10.15.3
-			npm -v: 		6.4.1
+			node -v: 	10.15.3
+			npm -v: 	6.4.1
 			ng --version: 	8.0.3
 			
 		
 		To install Node.JS:
-			Download NodeJS from: https://nodejs.org/en/download/
+			Download NodeJS from: https://nodejs.org/en/download/ 
+			Unzip in fromend directory
 		
 		To install Angular CLI:
 			npm install -g @angular/cli
